@@ -19,4 +19,10 @@ public class CommonPointConfig {
 	public void DataPackageConfig() {
 		
 	}
+	
+	@Pointcut("bean(*Service*)")
+	public void allPackageConfigUsingBean() {}
+	
+	@Pointcut("@annotation(com.rakshan.learn_spring_aop.aopexample.annotations.TrackTime)")
+	public void trackTimeAnnotation() {}
 }
